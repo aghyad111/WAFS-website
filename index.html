@@ -1,171 +1,194 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Een reis van oorlog naar innovatie - Een portfolio die mijn transformatie en technische groei laat zien">
-    <title>mijn naam - Portfolio</title>
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
-    <link rel="stylesheet" href="styles/style.css">
+   <!-- Basic meta tags for character encoding and responsive viewport -->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Meta description for SEO -->
+   <meta name="description" content="Een reis van oorlog naar innovatie - Een portfolio die mijn transformatie en technische groei laat zien">
+   <title>mijn naam - Portfolio</title>
+   
+   <!-- External resources: Google Fonts and custom stylesheet -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
+   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="profile-banner">
-            <a>
-                <img 
-                    class="profile-image" 
-                    src="assets/space.jpg"
-                    alt="Professional headshot of Aghyad"
-                    loading="eager"
-                >
-            </a>
-            <div class="profile-info">
-                <h1>mijn naam</h1>
-            </div>
-        </div>  <!-- Deze div was gemist -->
+   <!-- Header section containing profile information and navigation -->
+   <header class="header">
+       <!-- Profile banner with image and name -->
+       <div class="profile-banner">
+           <a>
+               <img 
+                   class="profile-image" 
+                   src="assets/space.jpg"
+                   alt="Professional headshot of Aghyad"
+                   loading="eager"
+               >
+           </a>
+           <div class="profile-info">
+               <h1>mijn naam</h1>
+           </div>
+       </div>
 
+       <!-- Navigation menu with hamburger toggle for mobile -->
+       <nav class="main-nav" id="main-nav">
+           <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+           <ul>
+               <li><a href="#journey">Mijn Reis</a></li>
+               <li><a href="#goals">Leerdoelen</a></li>
+               <li><a href="#projects">Projecten</a></li>
+               <li><a href="#contact">Contact</a></li>
+           </ul>
+       </nav>
+   </header>
 
-    
-        <nav class="main-nav" id="main-nav">
-            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
-            <ul>
-                <li><a href="#journey">Mijn Reis</a></li>
-                <li><a href="#goals">Leerdoelen</a></li>
-                <li><a href="#projects">Projecten</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+   <main>
+       <!-- Journey section - Personal story and background -->
+       <section id="journey" class="section">
+           <h2>Mijn Reis</h2>
+           
+           <div class="journey-container">
+               <!-- Background subsection showing the path from Syria to Netherlands -->
+               <h3 class="journey-subtitle">Waar Ik Vandaan Kom</h3>
+               <div class="timeline">
+                   <!-- Timeline item: Origin in Syria -->
+                   <div class="timeline-item" data-popup-image="assets/Syria.jpg">
+                       <h3>Oorsprong in Syrië</h3>
+                       <p>Mijn reis begon in Syrië, een land van geschiedenis en cultuur, maar ook van conflicten. Ik verliet mijn universiteit en mijn thuisland, niet wetend wat de toekomst zou brengen.</p>
+                   </div>
+       
+                   <!-- Timeline item: Arrival in Netherlands -->
+                   <div class="timeline-item" data-popup-image="assets/tulip.jpg">
+                       <h3>Aankomst in Nederland</h3>
+                       <p>Ik begon mijn leven helemaal opnieuw in Nederland. Een nieuw land, een nieuwe cultuur, en een onbekende taal. Mijn eerste uitdaging was het vinden van mijn plek in een compleet nieuwe omgeving.</p>
+                   </div>
+       
+                   <!-- Timeline item: Language and Education Challenges -->
+                   <div class="timeline-item" data-popup-image="assets/integratie.jpg">
+                       <h3>Taalbarrière en Onderwijsuitdagingen</h3>
+                       <p>Nederlands leren werd mijn eerste en belangrijkste stap. Zonder de taal te spreken kon ik niet studeren, werken of integreren. Het was moeilijk, maar elke nieuwe zin werd een stap vooruit.</p>
+                   </div>
+               </div>
+       
+               <!-- Future plans subsection -->
+               <h3 class="journey-subtitle">Mijn Toekomstplannen</h3>
+               <div class="timeline">
+                   <!-- Timeline item: Web Development Minor -->
+                   <div class="timeline-item" data-popup-image="assets/web_development.jpg">
+                       <h3>Minor Web Development</h3>
+                       <p>De minor is voor mij een kans om mijn webontwikkelingsvaardigheden te versterken. Als cybersecurity student focus ik meestal op andere aspecten van IT, maar ik wil deze kant van het vakgebied niet als zwakpunt hebben. Door deze minor wil ik een meer complete IT professional worden.</p>
+                   </div>
+                   
+                   <!-- Timeline item: Bachelor's Degree Progress -->
+                   <div class="timeline-item" data-popup-image="assets/graduation.jpg">
+                       <h3>Op Weg Naar Mijn Bachelor</h3>
+                       <p>Het behalen van mijn propedeuse en het bereiken van het derde jaar waren belangrijke mijlpalen, maar de reis is nog niet voorbij. Mijn focus ligt nu op het succesvol afronden van mijn bachelor. Het vraagt nog veel werk en toewijding, maar ik kijk ernaar uit om uiteindelijk mijn diploma in handen te hebben.</p>
+                   </div>
+               </div>
+           </div>
+       </section>
 
-    <main>
-        <section id="journey" class="section">
-            <h2>Mijn Reis</h2>
-            
-            <div class="journey-container">
-                <!-- Achtergrond subsectie -->
-                <h3 class="journey-subtitle">Waar Ik Vandaan Kom</h3>
-                <div class="timeline">
-                    <div class="timeline-item" data-popup-image="assets/Syria.jpg">
-                        <h3>Oorsprong in Syrië</h3>
-                        <p>Mijn reis begon in Syrië, een land van geschiedenis en cultuur, maar ook van conflicten. Ik verliet mijn universiteit en mijn thuisland, niet wetend wat de toekomst zou brengen.</p>
-                    </div>
-        
-                    <div class="timeline-item" data-popup-image="assets/tulip.jpg">
-                        <h3>Aankomst in Nederland</h3>
-                        <p>Ik begon mijn leven helemaal opnieuw in Nederland. Een nieuw land, een nieuwe cultuur, en een onbekende taal. Mijn eerste uitdaging was het vinden van mijn plek in een compleet nieuwe omgeving.</p>
-                    </div>
-        
-                    <div class="timeline-item" data-popup-image="assets/integratie.jpg">
-                        <h3>Taalbarrière en Onderwijsuitdagingen</h3>
-                        <p>Nederlands leren werd mijn eerste en belangrijkste stap. Zonder de taal te spreken kon ik niet studeren, werken of integreren. Het was moeilijk, maar elke nieuwe zin werd een stap vooruit.</p>
-                    </div>
-                </div>
-        
-                <!-- Toekomstplannen subsectie -->
-                <h3 class="journey-subtitle">Mijn Toekomstplannen</h3>
-                <div class="timeline">
-                    <div class="timeline-item" data-popup-image="assets/web_development.jpg">
-                        <h3>Minor Web Development</h3>
-                        <p>De minor is voor mij een kans om mijn webontwikkelingsvaardigheden te versterken. Als cybersecurity student focus ik meestal op andere aspecten van IT, maar ik wil deze kant van het vakgebied niet als zwakpunt hebben. Door deze minor wil ik een meer complete IT professional worden.</p>
-                    </div>
-                    
-                    <div class="timeline-item" data-popup-image="assets/graduation.jpg">
-                        <h3>Op Weg Naar Mijn Bachelor</h3>
-                        <p>Het behalen van mijn propedeuse en het bereiken van het derde jaar waren belangrijke mijlpalen, maar de reis is nog niet voorbij. Mijn focus ligt nu op het succesvol afronden van mijn bachelor. Het vraagt nog veel werk en toewijding, maar ik kijk ernaar uit om uiteindelijk mijn diploma in handen te hebben.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+       <!-- Learning goals section with three main categories -->
+       <section id="goals" class="section">
+           <h2>Mijn Leerdoelen</h2>
+           <div class="goals-grid">
+               <!-- Independent Development Goals Card -->
+               <div class="goal-card">
+                   <h3>Zelfstandig Ontwikkelen</h3>
+                   <p class="goal-description">Mijn hoofddoel is om minder afhankelijk te worden van AI-gegenereerde code en websites volledig zelfstandig te kunnen bouwen vanaf nul.</p>
+                   <ul>
+                       <li>Codes zelfstandig schrijven zonder AI-hulp</li>
+                       <li>Beter begrip ontwikkelen van webtechnieken</li>
+                       <li>Vertrouwen opbouwen in eigen programmeervaardigheden</li>
+                   </ul>
+               </div>
+       
+               <!-- Technical Skills Goals Card -->
+               <div class="goal-card">
+                   <h3>Technische Vaardigheden</h3>
+                   <p class="goal-description">Focus op het verbeteren van mijn uitwerk- en prototypingsvaardigheden met kernwebtechnologieën.</p>
+                   <ul>
+                       <li>HTML: Semantische structuur en toegankelijkheid</li>
+                       <li>CSS: Responsive design en moderne layouts</li>
+                       <li>JavaScript: Interactieve functionaliteiten</li>
+                   </ul>
+               </div>
+       
+               <!-- Success Criteria Card -->
+               <div class="goal-card">
+                   <h3>Succescriteria</h3>
+                   <p class="goal-description">Duidelijke criteria voor wat ik als succes beschouw aan het einde van de minor.</p>
+                   <div class="criteria-container">
+                       <!-- Success criteria list -->
+                       <div class="criteria success">
+                           <h4>Tevreden wanneer:</h4>
+                           <ul>
+                               <li>Websites zelfstandig kan bouwen zonder AI-tools</li>
+                               <li>Aan alle gestelde eisen kan voldoen</li>
+                               <li>Meesterproef succesvol afrond</li>
+                           </ul>
+                       </div>
+                       <!-- Warning criteria list -->
+                       <div class="criteria warning">
+                           <h4>Niet tevreden wanneer:</h4>
+                           <ul>
+                               <li>Werk grotendeels niet zelf geschreven is</li>
+                               <li>Onvoldoende kennis over webontwikkeling</li>
+                               <li>Vakken niet succesvol afgerond zijn</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
 
-        <section id="goals" class="section">
-            <h2>Mijn Leerdoelen</h2>
-            <div class="goals-grid">
-                <div class="goal-card">
-                    <h3>Zelfstandig Ontwikkelen</h3>
-                    <p class="goal-description">Mijn hoofddoel is om minder afhankelijk te worden van AI-gegenereerde code en websites volledig zelfstandig te kunnen bouwen vanaf nul.</p>
-                    <ul>
-                        <li>Codes zelfstandig schrijven zonder AI-hulp</li>
-                        <li>Beter begrip ontwikkelen van webtechnieken</li>
-                        <li>Vertrouwen opbouwen in eigen programmeervaardigheden</li>
-                    </ul>
-                </div>
-        
-                <div class="goal-card">
-                    <h3>Technische Vaardigheden</h3>
-                    <p class="goal-description">Focus op het verbeteren van mijn uitwerk- en prototypingsvaardigheden met kernwebtechnologieën.</p>
-                    <ul>
-                        <li>HTML: Semantische structuur en toegankelijkheid</li>
-                        <li>CSS: Responsive design en moderne layouts</li>
-                        <li>JavaScript: Interactieve functionaliteiten</li>
-                    </ul>
-                </div>
-        
-                <div class="goal-card">
-                    <h3>Succescriteria</h3>
-                    <p class="goal-description">Duidelijke criteria voor wat ik als succes beschouw aan het einde van de minor.</p>
-                    <div class="criteria-container">
-                        <div class="criteria success">
-                            <h4>Tevreden wanneer:</h4>
-                            <ul>
-                                <li>Websites zelfstandig kan bouwen zonder AI-tools</li>
-                                <li>Aan alle gestelde eisen kan voldoen</li>
-                                <li>Meesterproef succesvol afrond</li>
-                            </ul>
-                        </div>
-                        <div class="criteria warning">
-                            <h4>Niet tevreden wanneer:</h4>
-                            <ul>
-                                <li>Werk grotendeels niet zelf geschreven is</li>
-                                <li>Onvoldoende kennis over webontwikkeling</li>
-                                <li>Vakken niet succesvol afgerond zijn</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+       <!-- Projects section showcasing technical work -->
+       <section id="projects" class="section">
+           <h2>Mijn Projecten</h2>
+           <div class="projects-grid">
+               <!-- IoT Weather Station Project Card -->
+               <article class="project-card">
+                   <h3>IoT Weather Station</h3>
+                   <p>Geavanceerd weersmonitoringssysteem ontwikkeld met IoT-technologieën.</p>
+                   <div class="tech-stack">
+                       <span>Wemos D1 Mini</span>
+                       <span>C++</span>
+                       <span>Docker</span>
+                   </div>
+               </article>
 
-        <section id="projects" class="section">
-            <h2>Mijn Projecten</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <h3>IoT Weather Station</h3>
-                    <p>Geavanceerd weersmonitoringssysteem ontwikkeld met IoT-technologieën.</p>
-                    <div class="tech-stack">
-                        <span>Wemos D1 Mini</span>
-                        <span>C++</span>
-                        <span>Docker</span>
-                    </div>
-                </article>
+               <!-- Secure Login Systems Project Card -->
+               <article class="project-card">
+                   <h3>Beveiligde Login Systemen</h3>
+                   <p>Twee innovatieve beveiligingsprojecten gericht op cybersecurity.</p>
+                   <div class="tech-stack">
+                       <span>Django</span>
+                       <span>Python</span>
+                       <span>Security</span>
+                   </div>
+               </article>
+           </div>
+       </section>
+   </main>
 
-                <article class="project-card">
-                    <h3>Beveiligde Login Systemen</h3>
-                    <p>Twee innovatieve beveiligingsprojecten gericht op cybersecurity.</p>
-                    <div class="tech-stack">
-                        <span>Django</span>
-                        <span>Python</span>
-                        <span>Security</span>
-                    </div>
-                </article>
-            </div>
-        </section>
-    </main>
+   <!-- Footer section with contact information and social links -->
+   <footer id="contact" class="footer">
+       <h2>Contact</h2>
+       <!-- Social media and professional links -->
+       <div class="social-links">
+           <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+           <a href="https://github.com/aghyad111" target="_blank" rel="noopener noreferrer">GitHub</a>
+           <a href="mailto:your.email@example.com">aghyad.othman@hva.nl</a>
+       </div>
+       <!-- Copyright notice -->
+       <p class="copyright">© 2025 name</p>
+   </footer>
 
-    <footer id="contact" class="footer">
-        <h2>Contact</h2>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://github.com/aghyad111" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="mailto:your.email@example.com">aghyad.othman@hva.nl</a>
-        </div>
-        <p class="copyright">© 2025 name</p>
-    </footer>
-
-    <script src="scripts/script.js"></script>
-    <script src="scripts/myName.js"></script>
-    <script src="scripts/matrix.js"></script>
-    <script src="scripts/hackEffect.js"></script>
+   <!-- JavaScript files for various functionalities -->
+   <script src="scripts/script.js"></script>
+   <script src="scripts/myName.js"></script>
+   <script src="scripts/matrix.js"></script>
+   <script src="scripts/hackEffect.js"></script>
 
 </body>
 </html>

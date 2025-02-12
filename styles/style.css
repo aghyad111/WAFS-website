@@ -1,34 +1,44 @@
-/* Base Variables */
+/*
+Bronnen:
+- MDN Web Docs (https://developer.mozilla.org/) voor CSS-variabelen, flexbox en grid-layouts.
+- W3Schools (https://www.w3schools.com/) voor CSS-transities, animaties en media queries.
+- ChatGPT voor inspiratie en debugging van bepaalde geavanceerde CSS-animaties.
+*/
+
+
+/* Root variables - Define primary colors, spacing, and common properties used throughout the site */
 :root {
-    --color-primary: #2A4494;
-    --color-secondary: #FF6B6B;
-    --color-accent: #4ECDC4;
-    --color-background: #f8f9fa;
-    --color-text: #2d3436;
-    --gradient-main: linear-gradient(135deg, var(--color-primary), #1f1f1f);
-    --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 4rem;
-    --border-radius: 12px;
-    --transition: all 0.3s ease;
-    --box-shadow-light: 0 10px 30px rgba(0, 0, 0, 0.1);
-    --box-shadow-medium: 0 15px 40px rgba(0, 0, 0, 0.15);
+    --color-primary: #2A4494;     /* Main brand color */
+    --color-secondary: #FF6B6B;   /* Secondary accent color */
+    --color-accent: #4ECDC4;      /* Highlight color */
+    --color-background: #f8f9fa;  /* Default background */
+    --color-text: #2d3436;        /* Default text color */
+    --gradient-main: linear-gradient(135deg, var(--color-primary), #1f1f1f); /* Main gradient */
+    --spacing-sm: 1rem;           /* Small spacing unit */
+    --spacing-md: 2rem;           /* Medium spacing unit */
+    --spacing-lg: 4rem;           /* Large spacing unit */
+    --border-radius: 12px;        /* Standard border radius */
+    --transition: all 0.3s ease;  /* Standard transition */
+    --box-shadow-light: 0 10px 30px rgba(0, 0, 0, 0.1);   /* Light shadow */
+    --box-shadow-medium: 0 15px 40px rgba(0, 0, 0, 0.15); /* Medium shadow */
 }
 
-/* Reset & Base Styles */
+/* Reset default browser styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Base body styles */
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.7;
     color: var(--color-text);
-    background: rgba(135, 206, 235, 0.4);}
+    background: rgba(135, 206, 235, 0.4); /* Light blue transparent background */
+}
 
-/* Section Styles */
+/* Generic section styling */
 .section {
     padding: var(--spacing-lg) var(--spacing-md);
     max-width: 1200px;
@@ -40,14 +50,16 @@ body {
     z-index: 2;
 }
 
+/* Section heading styles with decorative underline */
 .section h2 {
     text-align: center;
     color: var(--color-primary);
-    font-size: clamp(1.8rem, 4vw, 2.2rem);
+    font-size: clamp(1.8rem, 4vw, 2.2rem); /* Responsive font size */
     margin-bottom: var(--spacing-lg);
     position: relative;
 }
 
+/* Decorative underline for section headings */
 .section h2::after {
     content: '';
     display: block;
@@ -58,13 +70,14 @@ body {
     border-radius: 2px;
 }
 
-/* Header Styles */
+/* Header section styling */
 .header {
     background: var(--gradient-main);
     padding: var(--spacing-lg) var(--spacing-md);
     position: relative;
 }
 
+/* Profile banner container */
 .profile-banner {
     max-width: 1000px;
     margin: 0 auto;
@@ -72,6 +85,7 @@ body {
     padding: var(--spacing-lg) 0;
 }
 
+/* Profile image styling with hover effects */
 .profile-image {
     width: 380px;
     height: 380px;
@@ -82,15 +96,18 @@ body {
     cursor: pointer;
 }
 
+/* Profile image hover animation */
 .profile-image:hover {
     transform: scale(1.05);
     filter: brightness(1.2) hue-rotate(45deg);
 }
 
+/* Profile information container */
 .profile-info {
     margin-top: var(--spacing-md);
 }
 
+/* Profile name styling */
 .profile-info h1 {
     font-size: clamp(2rem, 5vw, 2.5rem);
     color: white;
@@ -101,12 +118,13 @@ body {
     border-radius: 8px;
 }
 
+/* Profile name hover effect */
 .profile-info h1:hover {
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Navigation */
+/* Navigation bar styling */
 .main-nav {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -117,6 +135,7 @@ body {
     position: relative;
 }
 
+/* Navigation menu list */
 .main-nav ul {
     display: flex;
     justify-content: center;
@@ -124,6 +143,7 @@ body {
     list-style: none;
 }
 
+/* Navigation links */
 .main-nav a {
     color: white;
     text-decoration: none;
@@ -133,11 +153,13 @@ body {
     display: block;
 }
 
+/* Navigation link hover effect */
 .main-nav a:hover {
     background: var(--color-accent);
     color: var(--color-primary);
 }
 
+/* Mobile menu toggle button (hidden by default) */
 .menu-toggle {
     display: none;
     background: rgba(255, 255, 255, 0.1);
@@ -152,7 +174,7 @@ body {
     top: var(--spacing-sm);
 }
 
-/* Timeline Section */
+/* Timeline section styling */
 .timeline {
     position: relative;
     max-width: 1000px;
@@ -160,6 +182,7 @@ body {
     padding: 2rem;
 }
 
+/* Timeline vertical line */
 .timeline::before {
     content: '';
     position: absolute;
@@ -170,6 +193,7 @@ body {
     border-radius: 3px;
 }
 
+/* Individual timeline items */
 .timeline-item {
     position: relative;
     margin-left: 2rem;
@@ -181,6 +205,7 @@ body {
     transition: var(--transition);
 }
 
+/* Timeline item bullet point */
 .timeline-item::before {
     content: '';
     position: absolute;
@@ -194,11 +219,13 @@ body {
     box-shadow: 0 0 0 3px var(--color-primary);
 }
 
+/* Timeline item hover effect */
 .timeline-item:hover {
     transform: translateX(10px);
     box-shadow: var(--box-shadow-medium);
 }
 
+/* Timeline item heading */
 .timeline-item h3 {
     color: var(--color-primary);
     margin-bottom: 1rem;
@@ -206,6 +233,7 @@ body {
     position: relative;
 }
 
+/* Timeline item heading underline animation */
 .timeline-item h3::after {
     content: '';
     position: absolute;
@@ -219,17 +247,19 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* Timeline heading underline hover effect */
 .timeline-item:hover h3::after {
     transform: scaleX(1);
 }
 
+/* Timeline item text */
 .timeline-item p {
     color: var(--color-text);
     line-height: 1.8;
     font-size: 1.1rem;
 }
 
-/* Goals Section */
+/* Goals section grid layout */
 .goals-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -239,6 +269,7 @@ body {
     border-radius: var(--border-radius);
 }
 
+/* Individual goal cards */
 .goal-card {
     position: relative;
     background: white;
@@ -249,6 +280,7 @@ body {
     overflow: hidden;
 }
 
+/* Goal card top border decoration */
 .goal-card::before {
     content: '';
     position: absolute;
@@ -259,11 +291,13 @@ body {
     background: linear-gradient(to right, var(--color-primary), var(--color-accent));
 }
 
+/* Goal card hover effect */
 .goal-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--box-shadow-medium);
 }
 
+/* Goal description text */
 .goal-description {
     color: var(--color-text);
     margin-bottom: 1.5rem;
@@ -271,12 +305,14 @@ body {
     line-height: 1.6;
 }
 
+/* Goal list styling */
 .goal-card ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+/* Goal list items */
 .goal-card li {
     display: flex;
     align-items: center;
@@ -287,11 +323,13 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Goal list item hover effect */
 .goal-card li:hover {
     background: rgba(0, 0, 0, 0.05);
     transform: translateX(5px);
 }
 
+/* Goal list item arrow decoration */
 .goal-card li::before {
     content: '→';
     margin-right: 1rem;
@@ -300,7 +338,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* Projects Section */
+/* Projects section grid layout */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -310,6 +348,7 @@ body {
     border-radius: var(--border-radius);
 }
 
+/* Individual project cards */
 .project-card {
     display: flex;
     flex-direction: column;
@@ -320,11 +359,13 @@ body {
     transition: var(--transition);
 }
 
+/* Project card hover effect */
 .project-card:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: var(--box-shadow-medium);
 }
 
+/* Technology stack tags container */
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
@@ -332,6 +373,7 @@ body {
     margin-top: auto;
 }
 
+/* Individual technology tags */
 .tech-stack span {
     padding: 0.6rem 1.2rem;
     background: rgba(42, 68, 148, 0.1);
@@ -342,6 +384,7 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Technology tag hover effect */
 .tech-stack span:hover {
     background: var(--color-primary);
     color: white;
@@ -349,7 +392,7 @@ body {
     box-shadow: 0 5px 15px rgba(42, 68, 148, 0.2);
 }
 
-/* Journey Styles */
+/* Journey section container */
 .journey-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -358,6 +401,7 @@ body {
     padding: 2rem;
 }
 
+/* Journey section subtitles */
 .journey-subtitle {
     color: var(--color-primary);
     font-size: 1.8rem;
@@ -366,6 +410,7 @@ body {
     position: relative;
 }
 
+/* Journey subtitle decoration */
 .journey-subtitle::before {
     content: '';
     position: absolute;
@@ -377,14 +422,14 @@ body {
     transform: translateY(-50%);
 }
 
-/* Matrix Effect Container */
+/* Matrix effect container */
 #journey {
     position: relative;
     min-height: 100vh;
     z-index: 1;
 }
 
-/* Footer Styles */
+/* Footer styling */
 .footer {
     background: var(--gradient-main);
     color: white;
@@ -393,12 +438,14 @@ body {
     text-align: center;
 }
 
+/* Footer heading */
 .footer h2 {
     color: white;
     margin-bottom: var(--spacing-md);
     font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
+/* Social links container */
 .social-links {
     display: flex;
     justify-content: center;
@@ -407,6 +454,7 @@ body {
     flex-wrap: wrap;
 }
 
+/* Individual social links */
 .social-links a {
     color: white;
     text-decoration: none;
@@ -417,11 +465,13 @@ body {
     font-weight: 500;
 }
 
+/* Social link hover effect */
 .social-links a:hover {
     background: var(--color-accent);
     transform: translateY(-3px);
 }
 
+/* Copyright text */
 .copyright {
     margin-top: var(--spacing-md);
     padding-top: var(--spacing-md);
@@ -430,12 +480,14 @@ body {
     opacity: 0.8;
 }
 
-/* Responsive Design */
+/* Responsive design for mobile devices */
 @media (max-width: 768px) {
+    /* Show mobile menu toggle */
     .menu-toggle {
         display: block;
     }
 
+    /* Stack navigation items vertically */
     .main-nav ul {
         display: none;
         flex-direction: column;
@@ -443,34 +495,40 @@ body {
         padding-top: var(--spacing-lg);
     }
 
+    /* Show menu when activated */
     .main-nav ul.show {
         display: flex;
     }
 
+    /* Full-width navigation links */
     .main-nav a {
         width: 100%;
         text-align: center;
     }
 
+    /* Single column layout for grids */
     .goals-grid,
     .projects-grid {
         grid-template-columns: 1fr;
         padding: 1rem;
     }
 
+    /* Responsive design for mobile devices (continued) */
+    /* Stack social links vertically */
     .social-links {
         flex-direction: column;
         align-items: center;
         gap: var(--spacing-sm);
     }
 
+    /* Fixed width for social links on mobile */
     .social-links a {
         width: 200px;
         text-align: center;
     }
 }
 
-/* Timeline Popup Styles */
+/* Timeline popup styles */
 .timeline-popup {
     display: none;
     position: fixed;
@@ -487,6 +545,7 @@ body {
     animation: popup-appear 0.3s ease forwards;
 }
 
+/* Timeline popup image styling */
 .timeline-popup img {
     width: 100%;
     height: 100%;
@@ -494,15 +553,17 @@ body {
     object-position: center;
 }
 
-/* Voorkom scrollen op de achtergrond als popup actief is */
+/* Prevent background scrolling when popup is active */
 body.popup-active {
     overflow: hidden;
 }
 
+/* Show popup on timeline item hover */
 .timeline-item:hover .timeline-popup {
     display: block;
 }
 
+/* Popup appearance animation */
 @keyframes popup-appear {
     from {
         opacity: 0;
@@ -514,7 +575,7 @@ body.popup-active {
     }
 }
 
-/* Hack Effect Styles */
+/* Hack effect overlay styles */
 .hack-overlay {
     position: fixed;
     top: 0;
@@ -529,8 +590,9 @@ body.popup-active {
     animation: glitch-fade-in 0.5s forwards;
 }
 
+/* Hack effect terminal window */
 .hack-terminal {
-    color: #0F0;
+    color: #0F0;  /* Matrix green */
     font-family: monospace;
     font-size: 24px;
     padding: 20px;
@@ -542,6 +604,7 @@ body.popup-active {
     animation: glitch 0.3s infinite;
 }
 
+/* Glitch animation for hack effect */
 @keyframes glitch {
     0% { transform: translate(0) }
     20% { transform: translate(-2px, 2px) }
@@ -551,14 +614,15 @@ body.popup-active {
     100% { transform: translate(0) }
 }
 
+/* Fade in animation for hack overlay */
 @keyframes glitch-fade-in {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
+/* Fade out animation for hack overlay */
 @keyframes glitch-fade-out {
     from { opacity: 1; }
     to { opacity: 0; }
 }
-
 
