@@ -76,7 +76,17 @@ async function updateName() {
             
             // Initialize typewriter effect
             createTypewriter(profileNameElement, myName);
+
+            console.log(data193);
         }
+
+        // Update footer copyright name
+        const copyrightElement = document.querySelector('.copyright');
+        if (copyrightElement) {
+            copyrightElement.textContent = `© 2025 ${myName}`;
+        }
+
+        
 
         document.title = myName;
     } catch (error) {

@@ -72,4 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Matrix effect voor main
     new MatrixEffect(document.querySelector('main'));
+
+    // Matrix effect voor main
+    new MatrixEffect(document.querySelector('footer'));
 });
